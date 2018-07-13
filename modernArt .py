@@ -1,8 +1,8 @@
-
+#import all the functions from the turtle and random module
 from turtle import *
 from random import *
 
-#function that gives the turtle color randomly
+#function that gives the turtle shape a random color
 def randomColor():
   #colormode fixes the issue with TurtleGraphicsError: bad color sequence
   colorMode = colormode(255)
@@ -11,7 +11,7 @@ def randomColor():
   blue = randint(0,255)
   color(red,green,blue)
 
-#function that gives the turtle a random position
+#function that gives the turtle shape a random position
 def randomPlace():
   penup()
   x = randint(-100, 100)
@@ -22,20 +22,24 @@ def randomPlace():
 shape("turtle")
 speed(0)
 
+#draws a turtle at a random position with a random color
 def randomTurtle():
   randomColor()
   randomPlace()
   randomheading = randint(1,360)
+  #makes the turtle permanent on the screen
   stamp()
 
 for i in range(30):
   randomTurtle()
             
-
+#hideturtle() hides the drawn shapes, clear() clears the screen \
+#and setheading() returns the turtle icon to its default position
 hideturtle()
 clear()
 setheading(0)
 
+#draws a rectangle at a random position with a random color and size
 def randomRectangle():
  randomColor()
  randomPlace()
@@ -56,6 +60,7 @@ hideturtle()
 clear()
 setheading(0)
 
+#draws a circle at a random position with a random color and size
 def randomCircle():
   randomColor()
   randomPlace()
@@ -70,7 +75,7 @@ hideturtle()
 clear()
 setheading(0)
 
-
+#draws a star at a random position with a random color
 def randomStar():
   randomColor()
   randomPlace()
